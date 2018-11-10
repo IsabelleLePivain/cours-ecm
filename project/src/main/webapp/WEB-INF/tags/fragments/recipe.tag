@@ -16,7 +16,7 @@
     <div class="col-xs-12 col-sm-8">
         <h1>${fn:escapeXml(recipe.title)}</h1>
         <p>${fn:escapeXml(recipe.intro)}</p>
-        
+
         <c:forEach var="ingredient"  items="${fn:escapeXml(recipe.tags)}" >
             <span class="label label-primary">${fn:escapeXml(ingredient)}</span>
         </c:forEach>
