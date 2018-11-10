@@ -1,5 +1,6 @@
 package fr.cmm.tags;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 public class Functions {
 
@@ -9,4 +10,5 @@ public class Functions {
     }
 
 }
+
 //OK je pense (sauf "renvoyer"?=

@@ -7,7 +7,7 @@
     <!-- propriétés de la taglib -->
     <tlib-version>1.0</tlib-version>
     <short-name>jsp6</short-name>
-    <uri>http://com.acme.tags/util</uri>
+    <uri>http://mycompany.com</uri>
 
     <function>
         <!-- nom de la fonction -->
@@ -19,6 +19,3 @@
     </function>
 
 </taglib>
-
-
-

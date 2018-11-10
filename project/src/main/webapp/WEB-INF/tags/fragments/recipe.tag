@@ -31,7 +31,8 @@
             </ul>
         </c:if>
         <p>${fn:escapeXml(recipe.text)}</p>
-        <%--   <p>${jsp6:renvoyer(recipe.text)}</p> --%>
+        <%--<p>${jsp6:renvoyer(recipe.text)}</p>--%>
+
     </div>
 </div>
 
