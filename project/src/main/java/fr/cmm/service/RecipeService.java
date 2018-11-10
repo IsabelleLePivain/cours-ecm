@@ -44,8 +44,12 @@ public class RecipeService {
     }
 
     public Recipe findById(String id) {
-        return recipeCollection.findOne(new ObjectId(id)).as(Recipe.class);
-    }
+        try{
+            return recipeCollection.findOne(new ObjectId(id)).as(Recipe.class);
+        }catch(IllegalArgumentException exception){
+            return null;
+        }
+    } // on adapte pour avoir une réponse nulle en cas de mauvais format d'id
 
     public void save(Recipe recipe) {
         recipeCollection.save(recipe);
@@ -55,3 +59,4 @@ public class RecipeService {
         return recipeCollection.distinct("tags").as(String.class);
     }
 }
+// Pour serveur 2 : (findById modifié
