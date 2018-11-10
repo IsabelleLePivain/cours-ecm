@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -30,7 +30,7 @@
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/recettes">Toutes les recette</a></li>
+                    <li><a href="/recettes">Toutes les recettes</a></li>
                     <li><a href="/recette-du-moment">Recette du moment</a></li>
                 </ul>
             </div>
