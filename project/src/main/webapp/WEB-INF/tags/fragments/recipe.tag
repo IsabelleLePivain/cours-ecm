@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@ taglib prefix="cheminjsp6" uri="/WEB-INF/tld/jsp-6.tld" %>
 
 <%@ attribute name="recipe" required="true" rtexprvalue="true" type="fr.cmm.domain.Recipe"%>
 
@@ -30,6 +30,8 @@
                 </c:forEach>
             </ul>
         </c:if>
-        <p>${fn:escapeXml(recipe.text)}</p>
+        <p>${cheminjsp6:renvoyer(recipe.text)}</p>
+
     </div>
 </div>
+
