@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-public class API {
+public class API { // on introduit des méthodes HTTP de get
     @Inject
     private RecipeService recipeService;
     @RequestMapping(value = "/api/recipes",method = RequestMethod.GET, produces = "application/json")
