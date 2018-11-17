@@ -47,6 +47,7 @@ public class IndexController {
 
         model.put("recipes", recipeService.findByQuery(pageQuery));
         model.put("pagination", pagination);
+        model.put("recherche", searchForm); // il faut ajouter au modèle un objet "Formulaire de recherches" pour pouvoir le remplir avec les tags que l'on souhaite
 
         return "recettes";
     }
@@ -69,6 +70,7 @@ public class IndexController {
     }
 
     @RequestMapping("/recette/{id}")
+//    @RequestMapping(value = "/recette/{id}") ne fonctionne pas pour MVP-2
     public String recette(@PathVariable("id") String id, ModelMap model) {
         model.put("recipe", recipeService.findById(id));
 

@@ -25,8 +25,13 @@
 
         <form class="form-inline">
             <div class="form-group">
-                <label for="tag">Tag</label>
-                <input type="text" data-role="tags" data-service-url="/tags.json" data-limit="1" class="form-control" id="tag" placeholder="Tag" name="tag" style="width: 200px;">
+                <label for="tag"> Etiquette de la recherche </label>
+                <input value = "${recherche.tag}" type="text" data-role="tags"  data-service-url="/tags.json" data-limit="1"
+                       class="form-control" id="tag" placeholder="tag"  name="tag" style="width: 200px;">
+                <%--2 actions effectuées:
+                dans IndexController: model.put("recherche", searchForm);
+                dans recettes.jsp: ajout de l'info value = "${recherche.tag}" dans le form-control--%>
+                <%-- value="<?= $search ?>" ne fonctionne pas (php)--%>
             </div>
             <button type="submit" class="btn btn-default">Rechercher</button>
         </form>
@@ -34,7 +39,7 @@
         <ul class="search-results">
             <c:forEach var="item" items="${recipes}">
                 <li>
-                    <a href="/recette/${item.id}">
+                    <a href="/recette/${item.id}"> <%-- URL en haut de la page --%>
                         <div class="row">
                             <div class="col-xs-3">
                                 <img src="/image/${item.imageId}" alt="${fn:escapeXml(item.title)}" style="height: 200px">
