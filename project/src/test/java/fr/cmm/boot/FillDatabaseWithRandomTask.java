@@ -32,7 +32,7 @@ public class FillDatabaseWithRandomTask {
 
     static int count = 1;
 
-    static final String[] TAGS = {"choucroute", "alsace", "choux", "champignon"};
+    static final String[] TAGS = {"choucroute", "alsace", "choux", "champignon", "régional"};
 
     @Test
     public void fillDbWithRandomRecipes() throws IOException {

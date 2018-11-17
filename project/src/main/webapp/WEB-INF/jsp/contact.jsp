@@ -21,7 +21,7 @@
     <div class="container">
         <h1>Contact</h1>
 
-        <p>Nous n'existons pas vraiment.</p>
+        <p>Nous n'existons pas vraiment. C'est dommage pour vous. </p>
     </div>
 
     <fragments:footer />
