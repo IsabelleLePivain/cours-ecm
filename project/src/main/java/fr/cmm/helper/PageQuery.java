@@ -18,6 +18,12 @@ public class PageQuery {
 
     public void setIndex(int index) {
         this.index = index;
+//        MVC-3 - ne fonctionne pas
+//        if (index < 0) {
+//            this.index = 0;
+//        } else {
+//            this.index = index;
+//        }
     }
 
     public int getSize() {

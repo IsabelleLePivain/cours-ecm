@@ -36,9 +36,18 @@ public class IndexController {
 
     @RequestMapping("/recettes")
     public String recettes(SearchForm searchForm, ModelMap model) {
+
         PageQuery pageQuery = new PageQuery();
+
+        //        MVC-3 - ne fonctionne pas
+//        if(searchForm.getPageIndex() <=0){
+//            return "recettes";
+//        }
+        model.put("recipes", recipeService.findByQuery(pageQuery));
+
         pageQuery.setIndex(searchForm.getPageIndex() - 1);
         pageQuery.setTag(searchForm.getTag());
+
 
         Pagination pagination = new Pagination();
         pagination.setPageIndex(searchForm.getPageIndex());
